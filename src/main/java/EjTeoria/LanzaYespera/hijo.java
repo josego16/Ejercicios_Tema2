@@ -1,11 +1,9 @@
 package EjTeoria.LanzaYespera;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 
 import java.util.Random;
 
-@Data
 @AllArgsConstructor
 public class hijo implements Runnable {
     private String nombre;

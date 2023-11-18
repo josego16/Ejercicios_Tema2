@@ -1,9 +1,7 @@
 package Ejercicio2;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 
-@Data
 @AllArgsConstructor
 public class ejercicio2 extends Thread {
     private String palabra;
