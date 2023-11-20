@@ -14,4 +14,8 @@ public class numeroOculto {
             return 0;
         }
     }
+
+    public void setNumeroOculto(int numeroOculto) {
+        Ejercicio4.numeroOculto.numeroOculto = numeroOculto;
+    }
 }

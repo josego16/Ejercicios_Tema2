@@ -17,7 +17,7 @@ class hiloPpal extends Thread {
                 System.out.printf("El hilo ha adivinado el numero %s\n", num);
                 break;
             } else if (resultado == -1) {
-                System.out.printf("El juego ha terminado, otro hilo a adivinado el numero %s\n", num);
+                System.out.printf("El juego ha terminado, otro hilo ha adivinado un numero diferente %s\n", num);
                 break;
             }
         }
