@@ -1,6 +1,6 @@
 package Ejercicio5;
 
-public class Main {
+public class TransferenciaConBloqueo {
     public static void main(String[] args) {
         cuentaBancaria c1 = new cuentaBancaria("ES388388433883838388484", 20500);
         cuentaBancaria c2 = new cuentaBancaria("ES99090499388484889399", 50000);
