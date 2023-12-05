@@ -1,9 +1,9 @@
 package Ejercicio5;
 
 public class hilo extends Thread {
-    private cuentaBancaria c1;
-    private cuentaBancaria c2;
-    private String nombre;
+    private final cuentaBancaria c1;
+    private final cuentaBancaria c2;
+    private final String nombre;
 
     public hilo(String nombre, cuentaBancaria c1, cuentaBancaria c2) {
         super(nombre);
