@@ -5,22 +5,18 @@ import lombok.Getter;
 import lombok.ToString;
 
 @Getter
-@AllArgsConstructor
 @ToString
+@AllArgsConstructor
 public class cuentaBancaria {
-    private String numCuenta;
     private int saldo;
+    private final String numeroCuenta;
 
-    public synchronized double ingresarCantidad(double cantidad) {
-        return saldo += (int) cantidad;
+    public synchronized void sacarCantidad(int cantidad) {
+        this.saldo -= cantidad;
     }
 
-    public synchronized double sacarCantidad(double cantidad) {
-        return saldo -= (int) cantidad;
-    }
-
-    public String getNumeroCuenta() {
-        return numCuenta;
+    public synchronized void ingresarCantidad(int cantidad) {
+        this.saldo += cantidad;
     }
 }
 

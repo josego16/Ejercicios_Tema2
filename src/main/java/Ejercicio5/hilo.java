@@ -1,24 +1,24 @@
 package Ejercicio5;
 
-public class hilo extends Thread {
-    private final cuentaBancaria c1;
-    private final cuentaBancaria c2;
-    private final String nombre;
+import lombok.AllArgsConstructor;
 
-    public hilo(String nombre, cuentaBancaria c1, cuentaBancaria c2) {
-        super(nombre);
-        this.nombre = nombre;
-        this.c1 = c1;
-        this.c2 = c2;
-    }
+@AllArgsConstructor
+public class hilo extends Thread {
+    cuentaBancaria c1, c2;
 
     @Override
     public void run() {
+        int cantidadATransferir = 10;
+        int numTransferencias = 0;
+
         for (int i = 0; i < 1000; i++) {
-            boolean transfer = transferencia.transferCuenta(c1, c2, 10);
-            if (!transfer) {
-                System.out.println("Hilo " + nombre + " intento realizar la transferencia " + i + " y no pudo");
-            }
+            if (gestorTransferencias.transferencia(c1, c2, cantidadATransferir))
+                numTransferencias++;
         }
+        String msg = "Fin transferencia de la cuenta " + this.c1.getNumeroCuenta();
+        msg += " a la cuenta " + this.c2.getNumeroCuenta();
+        msg += " Realizada por el hilo " + this.getName();
+        msg += " por " + numTransferencias + " realizadas\n";
+        System.out.println(msg);
     }
 }

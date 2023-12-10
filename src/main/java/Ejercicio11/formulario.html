@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario Jose maria</title>
+</head>
+<body>
+<h1> Formulario </h1>
+<form id="formulario" method="post" onsubmit="return validacion()">
+	Nombre:
+	<p>
+		<label for="nombre"></label><input id="nombre" name="nombre" required type="text">
+	</p>
+	<br>
+	Edad:
+	<p>
+		<label for="edad"></label><input id="edad" maxlength="2" name="edad" required type="number">
+	</p>
+	<br>
+	Correo Electronico:
+	<p>
+		<label for="e-mail"></label><input id="e-mail" name="e-mail" required type="email">
+	</p>
+	<br>
+	Enviar:
+	<p>
+		<input type="submit" value="enviar datos">
+	</p>
+</form>
+<script src="validar.js"></script>
+</body>
+</html>
